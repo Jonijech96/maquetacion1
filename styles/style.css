@@ -1,0 +1,346 @@
+:root {
+  --main-color: #414641;
+  --secondary-color: #4c514c;
+  --alt-color: #7a8a80;
+  --background-color: #f4f6f3;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Reem Kufi Fun", sans-serif;
+}
+h1 {
+  margin: 0;
+  color: var(--main-color);
+  font-size: 78px;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+h2{
+  color: var(--main-color);
+}
+h3{
+  color: var(--main-color);
+}
+
+.header__container{
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+.header__content{
+  height: 100%;
+  width: 100%;
+  background-image: url("https://admincontent.bimobject.com/public/topbanner/805c168b-ea2e-4e37-8721-0457acf14e2f?ver=1654865658");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.container{
+  height: 100vh;
+  width: 100%;
+}
+
+.menu{
+  position: absolute;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.header__content__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu__links{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.menu__link{
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.menu__button{
+  border: 2px solid var(--secondary-color);
+  padding: 5px 10px;
+}
+
+.seccion__title{
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+.underline{
+  width: 7%;
+  height: 5px;
+  background-color: var(--alt-color);
+  border: 0;
+  border-radius: 15px;
+}
+.menu__mobile{
+  display: none;
+}
+.title-more{
+  display: none;
+}
+@media (max-width: 500px){
+  h1{
+    font-size: 46px;
+    font-weight: 600;
+  }
+  .logo{
+    display: none;
+  }
+  .menu__links{
+    display: none;
+  }
+  .menu__mobile{
+    display: block;
+    font-size: 30px;
+    color: var(--main-color);
+  }
+  .menu{
+    justify-content: flex-end;
+  }
+  .title-more{
+    display: inline;
+  }
+  .underline{
+    width: 14%;
+    height: 8px;
+    background-color: var(--secondary-color);
+  }
+  .header__content{
+  background-position: center;
+  }
+}
+/* LATEST ARTICLES */
+
+.latest-articles__content{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  padding: 60px 0;
+  text-align: center;
+}
+.latest-artices__cards{
+  display: flex;
+  gap: 15px;
+  width: 80%;
+  margin: 40px auto 0 auto;
+}
+
+.latest-articles__card{
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+}
+.latest-articles__card__img-content{
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.latest-articles__card__img{
+  width: 150%;
+}
+.latest-articles__card__content{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+@media (max-width:501px) {
+  
+  .latest-artices__cards{
+    flex-direction: column;
+  }
+  .latest-articles__content{
+    height: auto;
+    
+  }
+  .subtitle{
+    font-weight: 400;
+    font-size: 40px;
+    
+  }
+  .latest-artices__cards{
+    width: 90%;
+  }
+  .latest-articles__card{
+    height: 600px;
+  }
+  .latest-articles__text{
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0;
+  }
+}
+
+/* ABOUT */
+.about__container{
+  height: 80vh;
+  display: flex;
+  width: 100%;
+}
+
+.about__img{
+  background-image: url("https://images.squarespace-cdn.com/content/v1/520bc04fe4b03863c7f8a659/1505965654689-F8EUX5I1PDVT66SJ0UU8/spiritual+gifts.jpg?format=2500w");
+  width: 50%;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.about__content{
+  width: 50%;
+  text-align: center;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__text{
+  line-height: 2;
+}
+@media (max-width:500px) {
+  .about__container{
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+  }
+  .about__img{
+    width: 100%;
+    height: 300px;
+    
+  }
+  .about__content{
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+.about__text{
+  font-size: 1.3em;
+}
+}
+
+/* SUSCRIBE */
+.suscribe__content{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+.email{
+  border: none;
+  width: 100%;
+  height: 60px;
+  padding: 0 30px;
+}
+.button{
+  width: 150px;
+  margin: auto;
+  color: var(--main-color);
+}
+@media (max-width:500px) {
+  .suscribe__content{
+    height: 50vh;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+  }
+  .suscribe__content h2{
+    margin: 0;
+  }
+  .button{
+    width: 90%;
+    height: 60px;
+    font-size: 1.4em;
+  }
+}
+
+/* FOOTER */
+.footer__content{
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+.footer__icons{
+  display: flex;
+  gap: 15px;
+}
+.footer__icons a{
+  text-decoration: none;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--secondary-color);  
+  text-align: center;
+  line-height: 33px;
+}
+.footer__icons a i{
+  font-size: 20px;
+  color: #fff;
+}
+.footer__links{
+  display: flex;
+  gap: 30px;
+}
+@media (max-width:500px) {
+  .footer__content{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 30px;
+  }
+  .footer__links{
+    flex-direction: column;
+    gap: 30px;
+    order: -1;
+    text-align: center;
+  }
+  .footer__icons a{
+    height: 50px;
+    width: 50px;
+  }
+  .footer__icons a{
+    line-height: 60px;
+  }
+  .footer__icons a i{
+    font-size: 30px;
+  }
+}
